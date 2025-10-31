@@ -1,4 +1,4 @@
-# 🪄 Agora – AI Debate & Consensus Platform
+# Agora – AI Debate & Consensus Platform
 
 > _"Turning conversation into structured understanding."_
 
@@ -9,19 +9,19 @@ Think of it as an intelligent moderator that helps groups **see how discussions 
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🎙 **Real-Time Debate Rooms** – Join LiveKit-powered audio or video rooms.  
-- 🧠 **AI Argument Mining** – Automatically detects claims, counterpoints, and sentiment.  
-- 🗺 **Consensus Visualization** – Interactive map showing agreement and divergence clusters.  
-- 🧾 **Speech-to-Text & Summarization** – Transcribes and summarizes discussions.  
-- 🔐 **Supabase Auth** – Secure login and participant management.  
-- 💾 **Structured Storage (Postgres)** – Stores transcripts, argument graphs, and summaries.  
-- 🐳 **Containerized Deployment** – Fully Dockerized microservices with optional AWS integration.  
+- **Real-Time Debate Rooms** – Join LiveKit-powered audio or video rooms.  
+- **AI Argument Mining** – Automatically detects claims, counterpoints, and sentiment.  
+- **Consensus Visualization** – Interactive map showing agreement and divergence clusters.  
+- **Speech-to-Text & Summarization** – Transcribes and summarizes discussions.  
+- **Supabase Auth** – Secure login and participant management.  
+- **Structured Storage (Postgres)** – Stores transcripts, argument graphs, and summaries.  
+- **Containerized Deployment** – Fully Dockerized microservices with optional AWS integration.  
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-------------|----------|
@@ -35,7 +35,7 @@ Think of it as an intelligent moderator that helps groups **see how discussions 
 
 ---
 
-## 🏗 Architecture Overview
+## Architecture Overview
 
 ```
                     ┌────────────────────┐
@@ -57,7 +57,7 @@ Think of it as an intelligent moderator that helps groups **see how discussions 
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - Python 3.10+
@@ -100,19 +100,19 @@ Services exposed:
 
 ---
 
-## 🌱 Roadmap
+## Roadmap
 
 | Milestone | Description                                                | Status        |
 | --------- | ---------------------------------------------------------- | ------------- |
-| **MVP**   | Voice rooms + AI argument extraction + consensus dashboard | ✅ In progress |
-| **v1.0**  | Real-time sentiment graphs + Supabase sync + auth          | ⏳ Planned     |
-| **v1.1**  | Multi-language support (speech-to-text + translation)      | ⏳ Planned     |
-| **v2.0**  | Federated debate summaries + exportable data APIs          | ⏳ Planned     |
-| **v2.5**  | AI Debate Coach (feedback on speaking style)               | 💡 Idea stage |
+| **MVP**   | Voice rooms + AI argument extraction + consensus dashboard | In progress   |
+| **v1.0**  | Real-time sentiment graphs + Supabase sync + auth          | Planned       |
+| **v1.1**  | Multi-language support (speech-to-text + translation)      | Planned       |
+| **v2.0**  | Federated debate summaries + exportable data APIs          | Planned       |
+| **v2.5**  | AI Debate Coach (feedback on speaking style)               | Idea stage    |
 
 ---
 
-## 🧠 Research References
+## Research References
 
 * Argument Mining – *Peldszus & Stede (2013), "From Argument Diagrams to Argumentation Mining"*
 * Consensus Detection – *Rosenthal & McKeown (2015), "Detecting Agreement and Disagreement in Conversations"*
@@ -121,7 +121,7 @@ Services exposed:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!
 To get started:
@@ -139,21 +139,21 @@ Please follow the [Contributor Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ---
 
-## 🧾 License
+## License
 
 This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
 
 ---
 
-## 🌍 Community & Support
+## Community & Support
 
-* 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/agora-ai/discussions)
-* 🐛 Issues: [GitHub Issues](https://github.com/yourusername/agora-ai/issues)
-* 📧 Contact: `maintainers@agora.ai`
+* Discussions: [GitHub Discussions](https://github.com/yourusername/agora-ai/discussions)
+* Issues: [GitHub Issues](https://github.com/yourusername/agora-ai/issues)
+* Contact: `maintainers@agora.ai`
 
 ---
 
-### ✨ Short Description (for GitHub)
+### Short Description (for GitHub)
 
 > **Agora** is an open-source AI debate and consensus analysis platform.
 > It listens to voice or text discussions, identifies arguments, and generates interactive consensus maps — revealing how conversations evolve and where people agree or diverge.
