@@ -153,7 +153,3 @@ This project is licensed under the **MIT License** – see the [LICENSE](./LICEN
 
 ---
 
-### Short Description (for GitHub)
-
-> **Agora** is an open-source AI debate and consensus analysis platform.
-> It listens to voice or text discussions, identifies arguments, and generates interactive consensus maps — revealing how conversations evolve and where people agree or diverge.
