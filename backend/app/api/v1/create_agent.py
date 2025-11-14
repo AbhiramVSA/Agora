@@ -1,15 +1,14 @@
-from livekit.agents import AgentSession, JobContext
-from livekit import agents
-
-from core.debate_agent import DebateAgent
-
+from fastapi import APIRouter
 from dotenv import load_dotenv
-from app.core.config import Settings
+from core.debate_agent import DebateAgent
+from schemas.debate_schema import DebateSession
+from livekit.agents import AgentSession, JobContext
+
+router = APIRouter()
 
 load_dotenv()
 
-print(Settings.OPENAI_API_KEY)
-
+@router.post("/start-debate-session", response_model=DebateSession)
 async def agent_entrypoint(ctx: JobContext):
     """Simple multi-agent entry point"""
     await ctx.connect()
@@ -23,5 +22,3 @@ async def agent_entrypoint(ctx: JobContext):
         room=ctx.room
     )
 
-if __name__ == "__main__":
-    agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=agent_entrypoint))

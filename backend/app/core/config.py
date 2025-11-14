@@ -9,11 +9,12 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str = Field(default="")
     LIVEKIT_API_KEY: str = Field(default="")
     LIVEKIT_API_SECRET: str = Field(default="")
-    LIVEKIT_URL: str = Field(default="https://api.elevenlabs.io/v1/text-to-dialogue")
+    LIVEKIT_URL: str = Field(default="")
     CARTESIA_API_KEY: str = Field(default="")
-    DEEPGRAM_API_KEY: str = Field(default="Monica_inSleeveless_20220819")
-    DEEPGRAM_API_KEY: str = Field(default="Monica_inSleeveless_20220819")
-    SQLALCHEMY_DATABASE_URI: str = Field(default="Monica_inSleeveless_20220819")
+    DEEPGRAM_API_KEY: str = Field(default="")
+    DEEPGRAM_API_KEY: str = Field(default="")
+    SQLALCHEMY_DATABASE_URI: str = Field(default="")
+    ALEMBIC_DATABASE_URI: str = Field(default="")
 
     class Config:
         env_file = ".env"

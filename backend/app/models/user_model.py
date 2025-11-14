@@ -1,15 +1,13 @@
 from __future__ import annotations
 
-from typing import Optional, TYPE_CHECKING
+from typing import Optional
 
 from pydantic import EmailStr
 from sqlalchemy import Column, String
-from sqlmodel import Field, Relationship, SQLModel
+from sqlmodel import Field, SQLModel
 
 from .BaseUUIDmodel import BaseUUIDModel
 
-if TYPE_CHECKING:
-    from .debate_model import Debate, DebateParticipant
 
 
 class UserBase(SQLModel):
@@ -26,11 +24,6 @@ class User(BaseUUIDModel, UserBase, table=True):
     display_name: Optional[str] = Field(
         default=None,
         sa_column=Column(String(150), nullable=True),
-    )
-
-    debates_created: list["Debate"] = Relationship(back_populates="created_by")
-    debate_participations: list["DebateParticipant"] = Relationship(
-        back_populates="user"
     )
 
 

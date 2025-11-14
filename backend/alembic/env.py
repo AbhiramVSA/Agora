@@ -66,7 +66,7 @@ def run_migrations_online() -> None:
 
     """
     configuration = config.get_section(config.config_ini_section, {})
-    configuration["sqlalchemy.url"] = settings.ALEMBIC_DATABASE_URI
+    configuration["sqlalchemy.url"] = Settings.ALEMBIC_DATABASE_URI
 
     connectable = engine_from_config(
         configuration,

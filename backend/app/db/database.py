@@ -1,42 +1,18 @@
-from __future__ import annotations
-
-from contextlib import contextmanager
-from typing import Iterator
-
-from sqlmodel import SQLModel, Session, create_engine
-
+import os
+import asyncio
+import re
+from sqlalchemy import text
+from dotenv import load_dotenv
+from sqlalchemy.ext.asyncio import create_async_engine
 from core.config import Settings
 
-engine = create_engine(
-	Settings.SQLALCHEMY_DATABASE_URI,
-	echo=False,
-	pool_pre_ping=True,
-)
+load_dotenv()
 
+async def async_main() -> None:
+    engine = create_async_engine(Settings.SQLALCHEMY_DATABASE_URI, echo=True)
+    async with engine.connect() as conn:
+        result = await conn.execute(text("select 'hello world'"))
+        print(result.fetchall())
+    await engine.dispose()
 
-def init_db() -> None:
-	"""Create database tables for all SQLModel subclasses."""
-
-	SQLModel.metadata.create_all(bind=engine)
-
-
-def get_session() -> Iterator[Session]:
-	"""FastAPI dependency that yields a database session."""
-
-	with Session(engine) as session:
-		yield session
-
-
-@contextmanager
-def session_scope() -> Iterator[Session]:
-	"""Provide a transactional scope around a series of operations."""
-
-	session = Session(engine)
-	try:
-		yield session
-		session.commit()
-	except Exception:
-		session.rollback()
-		raise
-	finally:
-		session.close()
+asyncio.run(async_main())
